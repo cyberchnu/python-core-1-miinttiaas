@@ -1,3 +1,4 @@
 def tri_area(base, height):
   # Type your code
-  return 
+  return int(base*height)/2
+
