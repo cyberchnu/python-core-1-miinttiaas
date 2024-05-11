@@ -6,4 +6,3 @@ def makes10(a, b):
 # print(makes10(10,10))
 # print(makes10(10,9))
 # print(makes10(9,1))
-# print(makes10(9,0))
