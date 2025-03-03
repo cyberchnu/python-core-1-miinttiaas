@@ -1,7 +1,6 @@
 name: Autograding Tests
 'on':
 - push
-- workflow_dispatch
 - repository_dispatch
 permissions:
   checks: write
@@ -16,83 +15,83 @@ jobs:
       uses: actions/checkout@v4
     - name: test_addition.py
       id: test_addition-py
-      uses: education/autograding-python-grader@v1
+      uses: classroom-resources/autograding-python-grader@v1
       with:
         timeout: 10
         max-score: 1
         setup-command: sudo -H pip3 install pytest
     - name: test_both.py
       id: test_both-py
-      uses: education/autograding-python-grader@v1
+      uses: classroom-resources/autograding-python-grader@v1
       with:
         timeout: 10
         max-score: 1
         setup-command: sudo -H pip3 install pytest
     - name: test_calculate_fuel.py
       id: test_calculate_fuel-py
-      uses: education/autograding-python-grader@v1
+      uses: classroom-resources/autograding-python-grader@v1
       with:
         timeout: 10
         max-score: 1
         setup-command: sudo -H pip3 install pytest
     - name: test_fizz_buzz.py
       id: test_fizz_buzz-py
-      uses: education/autograding-python-grader@v1
+      uses: classroom-resources/autograding-python-grader@v1
       with:
         timeout: 10
         max-score: 1
         setup-command: sudo -H pip3 install pytest
     - name: test_int_within_bounds.py
       id: test_int_within_bounds-py
-      uses: education/autograding-python-grader@v1
+      uses: classroom-resources/autograding-python-grader@v1
       with:
         timeout: 10
         max-score: 1
         setup-command: sudo -H pip3 install pytest
     - name: test_hello.py
       id: test_hello-py
-      uses: education/autograding-python-grader@v1
+      uses: classroom-resources/autograding-python-grader@v1
       with:
         timeout: 10
         max-score: 1
         setup-command: sudo -H pip3 install pytest
     - name: test_makes10.py
       id: test_makes10-py
-      uses: education/autograding-python-grader@v1
+      uses: classroom-resources/autograding-python-grader@v1
       with:
         timeout: 10
         max-score: 1
         setup-command: sudo -H pip3 install pytest
     - name: test_mean.py
       id: test_mean-py
-      uses: education/autograding-python-grader@v1
+      uses: classroom-resources/autograding-python-grader@v1
       with:
         timeout: 10
         max-score: 1
         setup-command: sudo -H pip3 install pytest
     - name: test_squares_sum.py
       id: test_squares_sum-py
-      uses: education/autograding-python-grader@v1
+      uses: classroom-resources/autograding-python-grader@v1
       with:
         timeout: 10
         max-score: 1
         setup-command: sudo -H pip3 install pytest
     - name: test_sum_even_nums_in_range.py
       id: test_sum_even_nums_in_range-py
-      uses: education/autograding-python-grader@v1
+      uses: classroom-resources/autograding-python-grader@v1
       with:
         timeout: 10
         max-score: 1
         setup-command: sudo -H pip3 install pytest
     - name: test_tri_area.py
       id: test_tri_area-py
-      uses: education/autograding-python-grader@v1
+      uses: classroom-resources/autograding-python-grader@v1
       with:
         timeout: 10
         max-score: 1
         setup-command: sudo -H pip3 install pytest
     - name: Autograding Reporter
-      uses: education/autograding-grading-reporter@v1
+      uses: classroom-resources/autograding-grading-reporter@v1
       env:
         TEST_ADDITION-PY_RESULTS: "${{steps.test_addition-py.outputs.result}}"
         TEST_BOTH-PY_RESULTS: "${{steps.test_both-py.outputs.result}}"
